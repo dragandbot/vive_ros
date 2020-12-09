@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-${STEAMVR}/bin/linux64/vrcmd
+/root/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcmd
