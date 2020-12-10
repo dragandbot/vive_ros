@@ -95,7 +95,7 @@ class CMainApplicationMod : public CMainApplication{
         dprintf( "PoseCount:%d(%s) Controllers:%d\n", m_iValidPoseCount, m_strPoseClasses.c_str(), m_iTrackedControllerCount );
       }
       UpdateHMDMatrixPose();
-      ROS_INFO_THROTTLE(3.0,"RenderFrame() @ %d [fps]", [](int& cin, int dur){int ans = cin; cin=0; return ans/dur;}(RenderFrame_hz_count, 3));
+      //ROS_INFO_THROTTLE(3.0,"RenderFrame() @ %d [fps]", [](int& cin, int dur){int ans = cin; cin=0; return ans/dur;}(RenderFrame_hz_count, 3));
       RenderFrame_hz_count++;
     }
 
@@ -735,7 +735,7 @@ void VIVEnode::Run()
     pMainApplication->RenderFrame();
 #endif
 
-    ROS_INFO_THROTTLE(1.0,"Run() @ %d [fps]", [](int& cin){int ans = cin; cin=0; return ans;}(run_hz_count));
+    //ROS_INFO_THROTTLE(1.0,"Run() @ %d [fps]", [](int& cin){int ans = cin; cin=0; return ans;}(run_hz_count));
     run_hz_count++;
     ros::spinOnce();
     loop_rate_.sleep();
