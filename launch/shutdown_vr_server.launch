@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="close_servervr" pkg="vive_ros" type="close_servervr.sh" launch-prefix="$(find vive_ros)/scripts/close_servervr.sh" output="screen" required="true"/>
+
+</launch>
