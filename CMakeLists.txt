@@ -111,3 +111,24 @@ target_link_libraries(vive_node
   ${CMAKE_DL_LIBS}
   ${EXTRA_LIBS}
 )
+
+
+
+#############
+## Install ##
+#############
+
+## Mark executables and/or libraries for installation
+install(TARGETS vive_node
+    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+install(
+    DIRECTORY
+     include/${PROJECT_NAME}/
+    DESTINATION
+     ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+    FILES_MATCHING PATTERN
+     "*.h"
+)
+install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY scripts DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
